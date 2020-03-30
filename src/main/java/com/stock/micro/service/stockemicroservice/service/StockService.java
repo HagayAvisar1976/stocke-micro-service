@@ -6,6 +6,7 @@ import com.stock.micro.service.stockemicroservice.model.Stock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -68,4 +69,6 @@ public class StockService implements IStockService{
         Optional<Stock> result = list.stream().filter(s -> s.getId().equals(id)).findAny();
         return result.isPresent()? result.get(): null;
     }
+
+
 }
